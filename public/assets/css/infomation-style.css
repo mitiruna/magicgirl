@@ -1,0 +1,44 @@
+
+/* 
+    Created on : 2015/04/20, 0:06:13
+    Author     : Nakamura Yukinori
+*/
+
+//ナビゲーションバー色変更
+a {
+    background-color: #555;
+}
+
+#infomation .contents{
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#infomation .contents ul li{
+    font-size: 16px;
+}
+#infomation .table-bordered tr td.label_item{
+    background: #f3f3f3;
+    text-align: center;
+    width: 300px
+}
+
+#infomation .table-bordered tr td.form_contents{
+    padding: 20px;
+    width: 500px
+}
+
+#infomation .info_form{
+    margin: auto;
+}
+
+#infomation .info_head{
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+#infomation .contents .form-horizontal .btn_send{
+    margin-top: 30px;
+    text-align: center;
+}

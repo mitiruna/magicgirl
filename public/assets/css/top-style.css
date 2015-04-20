@@ -1,0 +1,22 @@
+
+/* 
+    トップページスタイル
+    Created on : 2015/04/19, 1:31:47
+    Author     : Nakamura Yukinori
+*/
+
+//ナビゲーションバー色変更
+a {
+    background-color: #555;
+}
+
+#top .contents{
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#top .contents ul li{
+    font-size: 16px;
+}
+

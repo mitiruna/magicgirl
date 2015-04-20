@@ -1,0 +1,76 @@
+
+/* 
+    Created on : 2015/04/06, 0:33:45
+    Author     : Nakamura Yukinori
+*/
+html, body {
+    height: 100%;
+}
+
+.main{
+    background-color: #c4e3f3;
+}
+
+.container{
+    position: relative;
+    //height: 100%;
+    background-color: #eeeeee;
+}
+
+.main-contents{
+    height: 100%;
+}
+
+.contents{
+    margin-bottom: 50px;
+}
+
+/* ナビゲーションバー */
+
+.navbar-collapse{
+    padding: 0;
+}
+
+.panel-title{
+    font-size: large;
+}
+
+.navbar .nav {
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav li {
+    display: table-cell;
+    float: none;
+}
+
+.navbar .nav li a{
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar .nav li:last-child a{
+    border-right: 0;
+}
+
+.important {
+    color: #FF0000;
+}
+
+.headline{
+    font-size: 18px;
+    border-left: 9px solid #dca7a7;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+/*------ footer -------*/
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    margin: auto;
+    right: 20px;
+}
