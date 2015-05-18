@@ -1,4 +1,3 @@
 <div class="panel panel-default panel-heading">
-    <div class="panel-title">魔法少女のゲームサイト</div>
-    <div ><?php echo Asset::img('cocktail_party.png', array('width' => 480, 'height' => 256)); ?></div>
+    <div><a href="/top"><?php echo Asset::img('cocktail_party.png', array('width' => 640, 'height' => 342, 'class' => 'site-title')); ?></a></div>
 </div>

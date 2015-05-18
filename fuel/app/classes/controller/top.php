@@ -25,8 +25,14 @@ class Controller_Top extends Core\Controller {
         // ===========================
         // コンテンツの設定
         // ===========================
+        //タイトル取得
+        $view->title = Model_Setting::get_title();
         $view->news = '最新情報';
-        
+        //print_r($view->news, true);
+        $fp = fopen('php://stderr', 'w');
+        fputs($fp, $view->news);
+        //file_put_contents('php://stderr', $view->news, FILE_APPEND);
+
         return $view;
     }
 }

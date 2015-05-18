@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
@@ -19,40 +20,54 @@
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends Controller
-{
+class Controller_Welcome extends Controller {
 
-	/**
-	 * The basic welcome message
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_index()
-	{
-		return Response::forge(View::forge('welcome/index'));
-	}
+    /**
+     * The basic welcome message
+     *
+     * @access  public
+     * @return  Response
+     */
+    public function action_index() {
+        return Response::forge(View::forge('welcome/index'));
+    }
 
-	/**
-	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
-	 * show how to use them.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_hello()
-	{
-		return Response::forge(Presenter::forge('welcome/hello'));
-	}
+    /**
+     * A typical "Hello, Bob!" type example.  This uses a Presenter to
+     * show how to use them.
+     *
+     * @access  public
+     * @return  Response
+     */
+    public function action_hello() {
+        return Response::forge(Presenter::forge('welcome/hello'));
+    }
 
-	/**
-	 * The 404 action for the application.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_404()
-	{
-		return Response::forge(Presenter::forge('welcome/404'), 404);
-	}
+    /**
+     * The 404 action for the application.
+     *
+     * @access  public
+     * @return  Response
+     */
+    public function action_404() {
+        return Response::forge(Presenter::forge('welcome/404'), 404);
+    }
+
+    /**
+     * エラーページ
+     * @return type
+     */
+    public function action_error() {
+        // ===========================
+        // 基本表示用ビューの設定
+        // ===========================
+        $view = View::forge('welcome/error');
+        $view->header = View::forge('common/header');
+        $view->navbar = View::forge('common/navbar');
+        $view->footer = View::forge('common/footer');
+        $view->title = Model_Setting::get_title();
+        
+        return $view;
+    }
+
 }

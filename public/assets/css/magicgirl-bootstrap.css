@@ -25,6 +25,11 @@ html, body {
     margin-bottom: 50px;
 }
 
+.site-title{
+    display: block;
+    margin: auto;
+}
+
 /* ナビゲーションバー */
 
 .navbar-collapse{

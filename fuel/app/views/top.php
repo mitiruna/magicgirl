@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>魔法少女</title>
+        <title><?php echo $title->value ?></title>
         <?php use Fuel\Core; ?>
         <?php echo Asset::css('bootstrap.min.css'); ?>
         <?php echo Asset::css('magicgirl-bootstrap.css'); ?>

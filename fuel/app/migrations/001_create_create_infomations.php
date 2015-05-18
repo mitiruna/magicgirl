@@ -7,7 +7,7 @@ class Create_create_infomations
 	public function up()
 	{
 		\DBUtil::create_table('infomations', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
 			'name' => array('constraint' => 20, 'type' => 'varchar'),
 			'mailaddress' => array('constraint' => 30, 'type' => 'varchar'),
 			'item_id' => array('constraint' => 11, 'type' => 'int'),

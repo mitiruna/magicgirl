@@ -78,7 +78,7 @@ return array(
 	/**
 	 * Localization & internationalization settings
 	 */
-	// 'language'           => 'en', // Default language
+	'language'           => 'ja', // Default language
 	// 'language_fallback'  => 'en', // Fallback language when file isn't available for default language
 	// 'locale'             => 'en_US', // PHP set_locale() setting, null to not set
 
@@ -179,6 +179,7 @@ return array(
 			'Fuel\\Core\\Response',
 			'Fuel\\Core\\View',
 			'Fuel\\Core\\ViewModel',
+                        'Fuel\\Core\\Validation',
 			'Closure',
 		),
 	),
@@ -258,7 +259,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -271,9 +272,9 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
-		// 	//'orm',
-		// ),
+		 'packages'  => array(
+		 	'orm',
+		 ),
 
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
@@ -309,6 +310,6 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	// ),
+	),
 
 );
