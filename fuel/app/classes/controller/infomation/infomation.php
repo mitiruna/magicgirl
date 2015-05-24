@@ -121,13 +121,10 @@ class Controller_Infomation_Infomation extends Controller {
                 //保存
                 $result = $infomation->save();
                 
-                Core\Log::error($result);
-                var_dump($result);
-                
                 Core\DB::commit_transaction();
             } catch (Exception $e) {
                 Core\DB::rollback_transaction();
-                echo 'error';
+                Core\Log::error('infomation db save error');
             }
         } else {
             //----------------------
