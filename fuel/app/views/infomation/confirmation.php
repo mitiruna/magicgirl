@@ -55,6 +55,7 @@
                             </div>
                         </div>
                     </form>
+                    <hr>
                 </div>
                 <?php echo $footer ?>
             </div>

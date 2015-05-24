@@ -48,6 +48,7 @@
                         <div class="btn_send"><button type="submit" name="btn_send" class="btn btn-primary" >確認</button></div>
                     </div>
                     </form>
+                    <hr>
                 </div>
 <?php echo $footer ?>
             </div>

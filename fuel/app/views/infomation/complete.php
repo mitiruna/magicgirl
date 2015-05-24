@@ -26,6 +26,7 @@
                             <a href="/top"><button name="btn_back" class="btn btn-default" >トップページに戻る</button></a>
                         </div>
                     </div>
+                    <hr>
                 </div>
 <?php echo $footer ?>
             </div>
