@@ -24,27 +24,17 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>テスト</td>
-                                <td>2015/04/15</td>
-                                <td><a href="#">マスターアップ！</a></td>
+                                <td>サイト新設</td>
+                                <td>2015/05/25</td>
+                                <td><a href="#">
+                                        カクテルパーティホームページ新設しました。<br>
+                                        これからよろしくお願いします。
+                                    </a></td>
                             </tr>
-                            <tr>
-                                <td>テスト</td>
-                                <td>2015/04/15</td>
-                                <td><a href="#">マスターアップ！</a></td>
-                            </tr>
-                            <tr>
-                                <td>テスト</td>
-                                <td>2015/04/15</td>
-                                <td><a href="#">マスターアップ！</a></td>
-                            </tr>
-                            <tr>
-                                <td>テスト</td>
-                                <td>2015/04/15</td>
-                                <td><a href="#">マスターアップ！</a></td>
-                            </tr>
+
                         </tbody>
                     </table>
+                    <hr>
                 </div>
                 <?php echo $footer ?>
             </div>
