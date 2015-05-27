@@ -10,7 +10,7 @@ class Create_news
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'title' => array('constraint' => 50, 'type' => 'varchar'),
 			'content' => array('type' => 'text'),
-			'link' => array('constraint' => 255, 'type' => 'varchar'),
+			'link' => array('constraint' => 255, 'type' => 'varchar', 'null' => true),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
