@@ -32,14 +32,10 @@ class Controller_Infomation_Infomation extends Controller {
         //タイトル取得
         $view->title = Model_Setting::get_title();
         //お問い合わせ項目リスト
-        $view->info_list = array(
-            '-- こちらから選択してください --',
-            1 => '製品について',
-            2 => 'サイトについて',
-            3 => 'ご意見・ご感想',
-            4 => 'バグ・不具合報告'
-        );
+        $view->info_list = Model_Meta::get_meta_list('info_content');
         
+        //var_dump(Model_Infomation::find(4));
+
         $view->flash = Session::get_flash('info_data');
 
         $view->info = 'お問い合わせ';
@@ -64,6 +60,11 @@ class Controller_Infomation_Infomation extends Controller {
             //成功
             //----------------------
             $data['input'] = $validation->validated();
+            //項目名取得
+//            $d = Model_Meta::find(3);
+//
+//            $data['input']['content'] = $d->value;
+            
             $view = View::forge('infomation/confirmation', $data);
             $view->info = 'お問い合わせ確認';
         } else {
@@ -117,10 +118,10 @@ class Controller_Infomation_Infomation extends Controller {
 
             try {
                 Core\DB::start_transaction();
-                
+
                 //保存
                 $result = $infomation->save();
-                
+
                 Core\DB::commit_transaction();
             } catch (Exception $e) {
                 Core\DB::rollback_transaction();
@@ -142,7 +143,7 @@ class Controller_Infomation_Infomation extends Controller {
         $view->header = View::forge('common/header');
         $view->navbar = View::forge('common/navbar');
         $view->footer = View::forge('common/footer');
-        
+
         // ===========================
         // コンテンツの設定
         // ===========================

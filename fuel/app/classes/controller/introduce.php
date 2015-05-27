@@ -1,10 +1,9 @@
 <?php
 
-include dirname(__FILE__) . '/../../config/define.php';
 use Fuel\Core;
 
 /**
- * トップページ　コントローラ
+ * サークル紹介　コントローラ
  *
  * A basic controller example.  Has examples of how to set the
  * response body and status.
@@ -12,26 +11,27 @@ use Fuel\Core;
  * @package  app
  * @extends  Controller
  */
-class Controller_Top extends Core\Controller {
+class Controller_Introduce extends Controller {
 
+    /**
+     * サークル紹介メインページ
+     * @return type
+     */
     public function action_index() {
         // ===========================
         // 基本表示用ビューの設定
         // ===========================
-        $view =  View::forge('top');
-        
+        $view = View::forge('introduce');
+
         // ===========================
         // コンテンツの設定
         // ===========================
         //タイトル取得
         $view->title = Model_Setting::get_title();
-        $view->news = '最新情報';
-        
-        $view->news_list = Model_News::find('all', array(
-            'limit' => NEWS_LIMIT,
-            'order_by' => array('created_at' => 'DESC'),
-        ));
-        
+
+        $view->info = 'サークル紹介';
+
         return $view;
     }
+
 }

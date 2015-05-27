@@ -12,8 +12,8 @@
     <body id="top" class="main">
         <div class="main-contents">
             <div class="container">
-                <?php echo $header ?>
-                <?php echo $navbar ?>
+                <?php include('common/header.php'); ?>
+                <?php include('common/navbar.php'); ?>
                 <div class="contents">
                     <div class="headline"><?php echo $news ?></div>
                     <table class="table table-striped">
@@ -23,20 +23,19 @@
                             <th width="70%"></th>
                         </thead>
                         <tbody>
+                            <?php foreach ((array)$news_list as $row): ?>
                             <tr>
-                                <td>サイト新設</td>
-                                <td>2015/05/25</td>
-                                <td><a href="#">
-                                        カクテルパーティホームページ新設しました。<br>
-                                        これからよろしくお願いします。
-                                    </a></td>
+                                <td><?php echo $row->get_title() ?></td>
+                                <td><?php echo Date::forge($row->get_created_at())->format('%Y/%m/%d') ?></td>
+                                <td><a href="<?php echo $row->get_link() ?>"><?php echo nl2br($row->get_content()) ?></a></td>
                             </tr>
+                            <?php endforeach; ?>
 
                         </tbody>
                     </table>
                     <hr>
                 </div>
-                <?php echo $footer ?>
+                <?php include('common/footer.php'); ?>
             </div>
 
         </div>
